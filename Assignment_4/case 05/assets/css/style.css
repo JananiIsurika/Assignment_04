@@ -1,0 +1,63 @@
+:root{
+    --slide-width:50vw;
+    --slide-height:50vh
+}
+
+div{
+    width: var(--slide-width);
+    height: var(--slide-height);
+
+}
+
+main{
+    width: var(--slide-width) ;
+    height: var(--slide-height) ;
+    border: 3px solid red;
+    overflow: hidden;
+}
+
+section{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    animation-name: my-animation4;
+    animation-duration: 3s;
+}
+div:first-child{
+    background-image: url("../images/slide1.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+div:nth-child(2){
+    background-image: url("../images/slide2.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+div:nth-child(3){
+    background-image: url("../images/slide3.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+div:last-child{
+    background-image: url("../images/slide4.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+@keyframes my-animation4 {
+    0%,20%{
+        transform: translateX(0%);
+
+    }
+    25%,45%{
+        transform: translateX(-25%);
+
+    }
+    50%,70%{
+        transform: translateX(-50%);
+
+    }
+    75%,100%{
+        transform: translateX(-75%);
+
+    }
+}
